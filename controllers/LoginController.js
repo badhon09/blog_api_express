@@ -1,22 +1,16 @@
-const express = require('express');
-const app = express();
-
+const express = require('express')
 const mongoose = require('mongoose')
+const router = express.Router();
 
-var posts = [
-  { title: 'Foo', body: 'some foo bar' },
-  { title: 'Foo bar', body: 'more foo bar' },
-  { title: 'Foo bar baz', body: 'more foo bar baz' }
-];
-
-exports.list = function(req, res){
-
-  var a = mongoose.createCollection("Student");
-res.send(a);
-
-};
+const loginMethod = (req,res) => {
+  res.send("hello"+req.body.name)
+}
 
 
 
 
+
+
+// router.post('/',loginMethod)
+module.exports = {loginMethod}
     

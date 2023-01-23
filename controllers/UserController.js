@@ -1,26 +1,29 @@
+const express = require('express');
+const app = express();
+
 const User = require("../models/User");
 
 
-exports.register = async(req,res) =>{
+exports.register = (req,res) =>{
 
-	res.send("nameeeee"+req.body.username)
+	res.send("xxxx"+req.body.name)
 
-	try{
+	// try{
 
-		const newUser = new User({
-			username:req.body.username,
-			email:req.body.email,
-			password:req.body.password
-		});
+	// 	const newUser = new User({
+	// 		username:req.body.username,
+	// 		email:req.body.email,
+	// 		password:req.body.password
+	// 	});
 
-		const user = await newUser.save();
-		res.status(200).json(user);
+	// 	const user = await newUser.save();
+	// 	res.status(200).json(user);
 
-	}catch(err){
+	// }catch(err){
 
-		res.status(500).json(err)
+	// 	res.status(500).json(err)
 
 
 
-	}
+	// }
 }

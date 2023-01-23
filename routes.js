@@ -1,12 +1,10 @@
 const express = require('express');
-const app = express.Router();
 var login = require('./controllers/LoginController.js');
-var users = require('./controllers/UserController.js');
+const users = require('./controllers/UserController.js');
 const router 		= express.Router();
 
-
 //login routes
-router.get('/login',login.list);
+router.post('/login',login.loginMethod);
 
 //users 
 router.post('/register',users.register);
