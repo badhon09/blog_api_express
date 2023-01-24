@@ -16,13 +16,7 @@ app.use(
   })
   );
 
- // app.use(bodyParser.urlencoded({extended: true}));
-
-  //app.use('/login', login);
  app.use('/',routes);
-// app.post('/test',(req,res)=>{
-//   res.send('sssss'+req.body.name);
-// })
 
 
 mongoose.connect('mongodb+srv://badhon_09:badhon09@cluster0.hyrvm.mongodb.net/blogExpress')
