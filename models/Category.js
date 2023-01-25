@@ -1,12 +1,11 @@
 const mongoose = require('mongoose')
 
-const CatSchema = new Schema({
+const CatSchema = new mongoose.Schema({
 	name:{
 		type:String,
 		required:true
 		
 	},
-	
 
 },
 {timestamps:true}
